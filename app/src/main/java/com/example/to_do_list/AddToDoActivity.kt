@@ -10,21 +10,19 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.storage
 
 class AddToDoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddToDoBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
-    private lateinit var storage: FirebaseStorage
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddToDoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
         firestore = Firebase.firestore
-        storage = Firebase.storage
+
 
         GoBack()
         AddToDo()
